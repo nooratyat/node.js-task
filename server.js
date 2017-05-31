@@ -2,7 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var AWS = require('aws-sdk');
  var s3 = require('s3');
-AWS.config.update({accessKeyId: 'AKIAIOABQ2NDVGQTIYOQ', secretAccessKey: '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'});
+AWS.config.update({accessKeyId:'AKIAICM7D3TQOUAI6SLQ', secretAccessKey: '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'});
 var s3Stream = require('./node_modules/s3-upload-stream/lib/s3-upload-stream.js')(new AWS.S3());
 
 var multiparty = require('connect-multiparty');
