@@ -26,7 +26,7 @@ app.post('/upload',function(req,res){
   console.log(file)
   var read = fs.createReadStream(file);
   var upload = s3Stream.upload({
-    "Bucket": "mixbucket",
+    "Bucket": "myy",
     "Key": file.name
   });
   // Handle errors.
