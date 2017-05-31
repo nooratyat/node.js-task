@@ -40,7 +40,7 @@ app.post('/upload',function(req,res){
   res.redirect('/')
 })
  /// to download url 
-var params = {Bucket: 'mix-mp3-uplooad', Key: file.name, Expires: 60};
+var params = {Bucket: 'myy', Key: file.name, Expires: 60};
   var url = s3.getSignedUrl('getObject', params);
   console.log("get URL is", url);
 
