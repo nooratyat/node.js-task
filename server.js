@@ -1,6 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var AWS = require('aws-sdk');
+ var s3 = require('s3');
 AWS.config.update({accessKeyId: 'AKIAIOABQ2NDVGQTIYOQ', secretAccessKey: '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'});
 var s3Stream = require('./node_modules/s3-upload-stream/lib/s3-upload-stream.js')(new AWS.S3());
 
@@ -38,7 +39,10 @@ app.post('/upload',function(req,res){
   
   res.redirect('/')
 })
-
+ /// to download url 
+var params = {Bucket: 'mix-mp3-uplooad', Key: file.name, Expires: 60};
+  var url = s3.getSignedUrl('getObject', params);
+  console.log("get URL is", url);
 
 
 app.listen(port, function() {
