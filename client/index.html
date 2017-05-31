@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+	<title> Express Music Server </title>
+	<style>
+		body {
+		
+			padding: 30px;
+			text-align: center;
+		}
+		.contents{
+			background: #fff;
+			padding: 20px;
+			margin: auto;
+			opacity: 0.7;
+			text-align: center;
+		}
+		.contents button{
+			width: 100px;
+			opacity: 0.9;
+			background: #000;
+		}
+		h1 {
+			color: #333333;
+			font-size: 60px;
+		}
+		h2 {
+			color: #2e2e2e;
+			font-size: 28px;
+		}
+		a {
+			color: #2f2f2f;
+			font-size: 18px
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container contents">
+	<h1>   Musical </h1>
+	
+	<hr>
+	
+	
+	
+		<div class="row">
+			<div class="col-md-4">
+				
+				<h2> play.mp3 </h2>
+				
+				<a href="http://localhost:2000/upload" target="_blank"> <button class="btn btn-success" "> Play </button>	</a> <hr>
+				
+			</div>
+			<div class="col-md-4">
+			<img class="img img-responsive" src="http://www.lanlinglaurel.com/music-pics.html"/>
+				<h2> Download.mp3 </h2>
+				
+				<a href="http://localhost:8000/files/download/:name"  target="_blank"> <button class="btn btn-success"> Downnload </button> </a>
+			</div>
+			
+		</div>
+	</div>
+	
+	<script >
+		// function playTunes() {
+  //     var request = new XMLHttpRequest();
+  //     request.open("POST", "localhost:8000/files/upload", true);
+  //     // request.responseType = "arraybuffer";
+
+  //     spinner.show();
+
+  //     request.onload = function() {
+  //         spinner.hide();
+  //       var Data = request.response;
+  //       process(Data);
+  //     };
+
+  //     request.send();
+    }
+
+ 
+	</script>
+</body>
+</html>
+
+
+
+
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+ <h1>upload ypur file</h1>
+
+<form method="post" enctype="multipart/form-data" action="/upload">
+	<input type="file" name="filename">
+	<input type="submit" value="upload">
+</form>
+ </body>
+ </html>
